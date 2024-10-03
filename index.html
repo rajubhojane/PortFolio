@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raju Bhojane Portfolio</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap';
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #141414;
+    --second-bg-color: #101a25;
+    --text-color: #ffffff;
+    --main-color: #18f7b8;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+html{
+    font-size: 63%;
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.logo span{
+    color: blue;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+.home-content span{
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.7rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img img{
+    width: 30vw;
+    border-radius: 40%;
+    animation: IMG 2s ease-in-out infinite;
+}
+
+@keyframes IMG {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.social-media-icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 10px;
+    margin: 2rem 5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media-icon a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1.5rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    font-weight: 600;
+    transition: .5s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.footer-text p span{
+    color: blue;
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 990px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+
+    #logo2{
+        display: none;
+    }
+
+    .header{
+        background: var(--bg-color);
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .social-media-icon a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 360px){
+    .footer{
+        flex-direction: column-reverse;
+    }
+}
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Raju</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="logo" id="logo2">Ultra <span>Code</span></a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Raju Bhojane</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>Committed to learning and evolving my coding skills.
+                My journey? From "Hello World!" to advanced development projects.
+            </p>
+            <button class="btn">
+                <a href="https://salmon-ursala-77.tiiny.site" download>Download CV</a>
+            </button>
+            
+        </div>
+        <div class="social-media-icon">
+            <a href="https://www.linkedin.com/in/raju-bhojane/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/rajubhojane" target="_blank"><i class='bx bxl-github' ></i></a>
+        </div>
+        <div class="home-img">
+            <img src="https://i.postimg.cc/q7y5P3Zd/my-photoaidcom-cropped.png" alt="">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Raju <span>Bhojane</span> | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script >
+        let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+}
+
+const typed = new Typed(".text", {
+    strings: ["Starter Frontend Developer", "Aspiring Full Stack Developer"],
+    typeSpeed: 90,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
+    </script>
+</body>
+</html>
